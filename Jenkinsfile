@@ -35,14 +35,14 @@ node{
 }
     
     stage('Build Image'){
-        sh 'docker build -t aadi/mavenwebapp .'
+        sh 'docker build -t aadiraj48dockerhub/my-maven-web-app .'
     }
     
     stage('Push Image'){
         withCredentials([string(credentialsId: 'DOCKER-CREDENTIALS', variable: 'DOCKER_CREDENTIALS')]) {
             sh 'docker login -u aadi -p ${DOCKER_CREDENTIALS}'
         }
-        sh 'docker push aadi/mavenwebapp'
+        sh 'docker push aadiraj48dockerhub/my-maven-web-app'
     }
     
     stage('Deploy App'){
