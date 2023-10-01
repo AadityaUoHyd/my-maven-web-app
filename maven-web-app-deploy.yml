@@ -18,7 +18,7 @@ spec:
   spec: 
     containers:
     - name: mavenwebappcontainer
-      image: aadi/mavenwebapp
+      image: aadiraj48dockerhub/my-maven-web-app
       imagePullPolicy: Always
       ports:
       - containerPort: 8080
